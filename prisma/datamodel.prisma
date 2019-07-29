@@ -1,0 +1,23 @@
+type User {
+  id: ID! @id @unique 
+  name: String!
+  email: String @unique
+  shops: [Shop!]!
+}
+
+type Shop {
+  id: ID! @id @unique
+  name: String!
+  address: String
+  owner: User!
+}
+
+type Category {
+  id: ID! @id @unique
+  iconCode: String!
+  en: CategoriesEnEmbd,
+}
+
+type CategoriesEnEmbd {
+  name: String!
+}

@@ -1,0 +1,19 @@
+{
+    "compilerOptions": {
+        "outDir": "dist",
+        "target": "es6",
+        "module": "commonjs",
+        "lib": ["esnext.asynciterable", "es2015"],
+        "resolveJsonModule": true,
+        "sourceMap": true,
+        "baseUrl": "./",
+        "paths": {
+            "@prisma": ["./prisma/generated/prisma-client/index"],
+            "@controllers/*": ["./src/controllers/*"],
+            "@routes/*": ["./src/routes/*"]
+        }
+    },
+    
+    "exclude": ["node_modules"],
+    "include": ["**/*.ts"],
+}

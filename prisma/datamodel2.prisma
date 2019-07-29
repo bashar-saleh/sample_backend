@@ -1,0 +1,23 @@
+type User {
+  id: ID! @id
+  name: String!
+  email: String @unique
+  shops: [Shop!]! @relation(link: INLINE)
+}
+
+type Shop {
+  id: ID! @id
+  name: String!
+  address: String
+  owner: User!
+}
+
+type Category {
+  id: ID! @id
+  iconCode: String!
+  en: CategoriesEnEmbd,
+}
+
+type CategoriesEnEmbd @embedded {
+  name: String!
+}
